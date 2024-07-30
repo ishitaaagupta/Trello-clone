@@ -8,7 +8,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -18,33 +17,33 @@ import java.util.Date;
 @Table(name = "task")
 public class Task {
 
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-        @NotBlank(message = "Name is mandatory")
-        private String name;
+    @NotBlank(message = "Name is mandatory")
+    private String name;
 
-        @NotBlank(message = "Description is mandatory")
-        private String description;
+    @NotBlank(message = "Description is mandatory")
+    private String description;
 
-        @NotBlank(message = "Status is mandatory")
-        private String status;
+    @NotBlank(message = "Status is mandatory")
+    private String status;
 
-        private String tags;
+    private String tags;
 
-        @Temporal(TemporalType.DATE)
-        @NotNull(message = "Due date is mandatory")
-        private Date dueDate;
+    @Temporal(TemporalType.DATE)
+    @NotNull(message = "Due date is mandatory")
+    private Date dueDate;
 
-        @ManyToOne
-        @JoinColumn(name = "project_id", nullable = false)
-        @JsonBackReference
-        private Project project;
+    @ManyToOne
+    @JoinColumn(name = "project_id", nullable = false)
+    @JsonBackReference
+    private Project project;
 
-        @ManyToOne
-        @JoinColumn(name = "user_id")
-        private User assignedUser;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User assignedUser;
 
 
 }

@@ -2,15 +2,11 @@ package com.trelloclone.Controller;
 
 import com.trelloclone.Model.Project;
 import com.trelloclone.Model.Task;
-import com.trelloclone.Model.User;
 import com.trelloclone.Service.ProjectService;
 import com.trelloclone.Service.TaskService;
-import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
