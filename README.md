@@ -23,7 +23,7 @@ This repository contains the backend implementation for a Trello clone applicati
 
 - **Tasks**:
   - Tasks have attributes such as project, name, detailed description, status, tags, due date, and assigned user
-  - Proper validation for all form fields on both frontend and backend
+  - Proper validation for all form fields on backend
 
 - **Security**:
   - All APIs and pages are authenticated
